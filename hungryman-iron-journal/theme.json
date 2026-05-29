@@ -42,13 +42,13 @@
         },
         {
           "slug": "accent",
-          "color": "#a77438",
-          "name": "Aged Bronze"
+          "color": "#8f2a2a",
+          "name": "Oxide Red"
         },
         {
           "slug": "accent-strong",
-          "color": "#cc9150",
-          "name": "Warm Bronze"
+          "color": "#c13a3a",
+          "name": "Signal Red"
         }
       ]
     },
@@ -141,7 +141,7 @@
         },
         ":hover": {
           "color": {
-            "text": "#db9d5a"
+            "text": "#d86b6b"
           }
         }
       },
@@ -151,7 +151,7 @@
         },
         "color": {
           "background": "var(--wp--preset--color--accent)",
-          "text": "#0f0e0d"
+          "text": "#f6f0e5"
         },
         ":hover": {
           "color": {

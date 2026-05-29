@@ -5,14 +5,15 @@
 	--iron-text: #ebe4d7;
 	--iron-muted: #b8af9f;
 	--iron-line: #413d36;
-	--iron-accent: #a77438;
-	--iron-accent-strong: #cc9150;
+	--iron-accent: #8f2a2a;
+	--iron-accent-strong: #c13a3a;
+	--iron-vhs-cool: #5a7488;
 
 	/* VHS effect controls. Tune these first to adjust intensity. */
-	--vhs-line-opacity: 0.18;
-	--vhs-noise-opacity: 0.12;
-	--vhs-tracking-opacity: 0.22;
-	--vhs-frame-shadow: 0 0 0 1px rgba(204, 145, 80, 0.18), 0 12px 28px rgba(0, 0, 0, 0.45);
+	--vhs-line-opacity: 0.2;
+	--vhs-noise-opacity: 0.16;
+	--vhs-tracking-opacity: 0.2;
+	--vhs-frame-shadow: 0 0 0 1px rgba(143, 42, 42, 0.24), 0 12px 28px rgba(0, 0, 0, 0.5);
 }
 
 body.hungryman-iron-journal {
@@ -27,8 +28,8 @@ body.hungryman-iron-journal .wp-site-blocks {
 	display: flex;
 	flex-direction: column;
 	background-image:
-		radial-gradient(rgba(255, 255, 255, 0.016) 1px, transparent 1px),
-		linear-gradient(180deg, rgba(255, 255, 255, 0.014), rgba(0, 0, 0, 0.03));
+		radial-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+		linear-gradient(180deg, rgba(84, 106, 124, 0.08), rgba(0, 0, 0, 0.22) 38%, rgba(121, 34, 34, 0.08));
 	background-size: 3px 3px, 100% 100%;
 }
 
@@ -229,7 +230,7 @@ body.hungryman-iron-journal .iron-vhs-embed,
 body.hungryman-iron-journal .wp-block-embed.is-style-iron-vhs {
 	position: relative;
 	margin-top: 0.7rem;
-	border: 1px solid #4e473c;
+	border: 1px solid #504948;
 	background: #090909;
 	box-shadow: var(--vhs-frame-shadow);
 	overflow: hidden;
@@ -246,7 +247,7 @@ body.hungryman-iron-journal .wp-block-embed.is-style-iron-vhs iframe {
 	display: block;
 	width: 100%;
 	aspect-ratio: 16 / 9;
-	filter: contrast(1.04) saturate(0.9) brightness(0.95);
+	filter: contrast(1.08) saturate(0.82) brightness(0.92);
 }
 
 body.hungryman-iron-journal .iron-vhs-embed::before,
@@ -264,8 +265,9 @@ body.hungryman-iron-journal .wp-block-embed.is-style-iron-vhs::before {
 			transparent 2px,
 			transparent 4px
 		),
-		radial-gradient(rgba(255, 255, 255, var(--vhs-noise-opacity)) 0.6px, transparent 0.8px);
-	background-size: 100% 100%, 3px 3px;
+		radial-gradient(rgba(255, 255, 255, var(--vhs-noise-opacity)) 0.6px, transparent 0.9px),
+		linear-gradient(90deg, rgba(143, 42, 42, 0.08), rgba(0, 0, 0, 0), rgba(90, 116, 136, 0.08));
+	background-size: 100% 100%, 3px 3px, 100% 100%;
 	mix-blend-mode: screen;
 }
 
