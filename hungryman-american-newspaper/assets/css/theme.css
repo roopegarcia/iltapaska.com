@@ -342,24 +342,4 @@ body.hungryman-american-newspaper .wp-block-image.is-style-press-photo figcaptio
 	.newspaper-front .wp-block-post-featured-image {
 		margin: 0;
 	}
-
-	.newspaper-article .wp-block-post-content {
-		column-count: 2;
-		column-gap: 2rem;
-	}
-
-	.newspaper-article .wp-block-post-content > h2,
-	.newspaper-article .wp-block-post-content > h3,
-	.newspaper-article .wp-block-post-content > figure,
-	.newspaper-article .wp-block-post-content > blockquote,
-	.newspaper-article .wp-block-post-content > table,
-	.newspaper-article .wp-block-post-content > .wp-block-image {
-		break-inside: avoid;
-	}
-}
-
-@media (min-width: 1120px) {
-	.newspaper-article .wp-block-post-content {
-		column-gap: 2.4rem;
-	}
 }
