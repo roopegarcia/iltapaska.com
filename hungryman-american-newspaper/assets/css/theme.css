@@ -43,7 +43,6 @@ body.hungryman-american-newspaper img {
 	filter: grayscale(0.08) contrast(1.03);
 }
 
-body.hungryman-american-newspaper .wp-block-image,
 body.hungryman-american-newspaper .wp-block-image.is-style-press-photo {
 	border-top: 1px solid var(--rule);
 	border-bottom: 1px solid var(--rule);
@@ -54,7 +53,6 @@ body.hungryman-american-newspaper .wp-block-image.is-style-press-photo {
 	background-size: 3px 3px, auto;
 }
 
-body.hungryman-american-newspaper .wp-block-image img,
 body.hungryman-american-newspaper .wp-block-image.is-style-press-photo img {
 	display: block;
 	width: 100%;
@@ -62,7 +60,6 @@ body.hungryman-american-newspaper .wp-block-image.is-style-press-photo img {
 	mix-blend-mode: multiply;
 }
 
-body.hungryman-american-newspaper .wp-block-image figcaption,
 body.hungryman-american-newspaper .wp-block-image.is-style-press-photo figcaption {
 	margin: 0.35rem 0 0;
 	padding-top: 0.28rem;
