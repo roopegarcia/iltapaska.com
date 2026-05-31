@@ -9,30 +9,50 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"main","className":"iron-main iron-main-shell","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|70","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group iron-main iron-main-shell" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--50)"><!-- wp:group {"align":"wide","className":"iron-article","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide iron-article"><!-- wp:heading {"level":1} -->
+<main class="wp-block-group iron-main iron-main-shell" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--50)"><!-- wp:group {"align":"wide","className":"iron-home-lede","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide iron-home-lede"><!-- wp:heading {"level":1} -->
 <h1 class="wp-block-heading">Margin Notes from Modern Life</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Weekly training logs, practical nutrition notes, and the road to a 100 kg bench and 1000 lb total. No hype, no hero photos, just work and receipts.</p>
-<!-- /wp:paragraph -->
-<!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/wp-admin/post-new.php">Write this week&#039;s entry</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<p>Weekly training logs, nutrition notes, and the road to a 100 kg bench and 1000 lb total. Mostly a place to think clearly, lift honestly, and leave useful notes behind.</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:query {"queryId":2,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false},"align":"wide","layout":{"type":"default"}} -->
-<div class="wp-block-query alignwide"><!-- wp:post-template {"className":"iron-query-grid"} -->
-<!-- wp:group {"className":"iron-post-card","layout":{"type":"constrained"}} -->
-<div class="wp-block-group iron-post-card"><!-- wp:post-terms {"term":"category"} /-->
+<!-- wp:query {"queryId":2,"query":{"perPage":1,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false},"align":"wide","layout":{"type":"default"}} -->
+<div class="wp-block-query alignwide"><!-- wp:post-template -->
+<!-- wp:group {"className":"iron-featured-post","layout":{"type":"constrained"}} -->
+<div class="wp-block-group iron-featured-post"><!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/10"} /-->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:post-terms {"term":"category"} /-->
 <!-- wp:post-title {"level":2,"isLink":true} /-->
 <!-- wp:post-date /-->
-<!-- wp:post-excerpt {"excerptLength":22,"moreText":""} /--></div>
+<!-- wp:post-excerpt {"excerptLength":36,"moreText":"Read the note"} /--></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 <!-- /wp:post-template --></div>
-<!-- /wp:query --></main>
+<!-- /wp:query -->
+
+<!-- wp:group {"align":"wide","className":"iron-archive-shell","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide iron-archive-shell"><!-- wp:heading {"level":2,"className":"iron-section-title"} -->
+<h2 class="wp-block-heading iron-section-title">Earlier Notes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:query {"queryId":3,"query":{"perPage":8,"pages":0,"offset":1,"postType":"post","order":"desc","orderBy":"date","inherit":false},"layout":{"type":"default"}} -->
+<div class="wp-block-query"><!-- wp:post-template {"className":"iron-query-list"} -->
+<!-- wp:group {"className":"iron-post-card","layout":{"type":"constrained"}} -->
+<div class="wp-block-group iron-post-card"><!-- wp:post-terms {"term":"category"} /-->
+<!-- wp:post-title {"level":3,"isLink":true} /-->
+<!-- wp:post-date /-->
+<!-- wp:post-excerpt {"excerptLength":24,"moreText":""} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>The archive starts after the first weekly note.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></main>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

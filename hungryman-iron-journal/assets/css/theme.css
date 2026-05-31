@@ -1,19 +1,19 @@
 :root {
-	--iron-bg: #11110f;
-	--iron-surface: #1a1a17;
-	--iron-surface-soft: #232320;
-	--iron-text: #ebe4d7;
-	--iron-muted: #b8af9f;
-	--iron-line: #413d36;
-	--iron-accent: #8f2a2a;
-	--iron-accent-strong: #c13a3a;
-	--iron-vhs-cool: #5a7488;
-
-	/* VHS effect controls. Tune these first to adjust intensity. */
-	--vhs-line-opacity: 0.2;
-	--vhs-noise-opacity: 0.16;
-	--vhs-tracking-opacity: 0.2;
-	--vhs-frame-shadow: 0 0 0 1px rgba(143, 42, 42, 0.24), 0 12px 28px rgba(0, 0, 0, 0.5);
+	--iron-bg: #f4f1e8;
+	--iron-paper: #fbfaf4;
+	--iron-surface: #e2e2dc;
+	--iron-surface-soft: #f0efe8;
+	--iron-text: #191816;
+	--iron-muted: #605d55;
+	--iron-line: #8f8d86;
+	--iron-line-dark: #4b4943;
+	--iron-accent: #7b1f24;
+	--iron-accent-strong: #064c83;
+	--iron-highlight: #ffffff;
+	--iron-shadow: #6f6d66;
+	--iron-blue-soft: #d8e6f2;
+	--iron-paper-line: rgba(6, 76, 131, 0.12);
+	--iron-bevel: inset 1px 1px 0 var(--iron-highlight), inset -1px -1px 0 var(--iron-shadow), 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
 body.hungryman-iron-journal {
@@ -21,6 +21,7 @@ body.hungryman-iron-journal {
 	min-height: 100vh;
 	background: var(--iron-bg);
 	color: var(--iron-text);
+	text-rendering: optimizeLegibility;
 }
 
 body.hungryman-iron-journal .wp-site-blocks {
@@ -28,9 +29,9 @@ body.hungryman-iron-journal .wp-site-blocks {
 	display: flex;
 	flex-direction: column;
 	background-image:
-		radial-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
-		linear-gradient(180deg, rgba(84, 106, 124, 0.08), rgba(0, 0, 0, 0.22) 38%, rgba(121, 34, 34, 0.08));
-	background-size: 3px 3px, 100% 100%;
+		linear-gradient(90deg, rgba(123, 31, 36, 0.055) 1px, transparent 1px),
+		linear-gradient(180deg, rgba(6, 76, 131, 0.05) 1px, transparent 1px);
+	background-size: 44px 44px, 100% 28px;
 }
 
 body.hungryman-iron-journal .wp-site-blocks > .entry-content {
@@ -38,53 +39,91 @@ body.hungryman-iron-journal .wp-site-blocks > .entry-content {
 }
 
 body.hungryman-iron-journal :focus-visible {
-	outline: 2px solid var(--iron-accent-strong);
-	outline-offset: 2px;
+	outline: 3px solid var(--iron-accent-strong);
+	outline-offset: 3px;
+}
+
+body.hungryman-iron-journal a {
+	text-underline-offset: 0.18em;
+	text-decoration-thickness: 1px;
+}
+
+body.hungryman-iron-journal img {
+	max-width: 100%;
+	height: auto;
 }
 
 body.hungryman-iron-journal .iron-masthead {
-	border-top: 1px solid var(--iron-line);
-	border-bottom: 1px solid var(--iron-line);
-	background: linear-gradient(180deg, rgba(26, 26, 23, 0.95), rgba(17, 17, 15, 0.98));
+	border-top: 1px solid var(--iron-highlight);
+	border-right: 1px solid var(--iron-line-dark);
+	border-bottom: 2px solid var(--iron-line-dark);
+	border-left: 1px solid var(--iron-highlight);
+	background: var(--iron-surface);
+	box-shadow: var(--iron-bevel);
 }
 
 body.hungryman-iron-journal .iron-masthead__inner {
-	padding-top: 0.8rem;
-	padding-bottom: 0.85rem;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
 }
 
 body.hungryman-iron-journal .iron-kicker {
-	margin: 0;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0.22rem 0.5rem;
+	border: 1px solid var(--iron-line);
+	background: var(--iron-paper);
+	box-shadow: inset 1px 1px 0 var(--iron-highlight), inset -1px -1px 0 #c2c1ba;
 	font-family: var(--wp--preset--font-family--utility-sans);
-	font-size: 0.74rem;
+	font-size: 0.72rem;
 	font-weight: 700;
-	letter-spacing: 0.09em;
+	letter-spacing: 0;
 	text-transform: uppercase;
 	color: var(--iron-muted);
 }
 
 body.hungryman-iron-journal .iron-nameplate {
-	margin: 0.35rem 0 0;
-	font-size: clamp(1.7rem, 5.5vw, 2.9rem);
+	margin: 0.42rem 0 0;
+	font-size: clamp(1.8rem, 5vw, 3rem);
 	line-height: 1;
+	color: var(--iron-text);
+}
+
+body.hungryman-iron-journal .iron-nameplate a {
+	color: inherit;
+	text-decoration: none;
 }
 
 body.hungryman-iron-journal .iron-nav {
-	margin-top: 0.7rem;
-	padding-top: 0.6rem;
+	margin-top: 0.75rem;
+	padding-top: 0.65rem;
 	border-top: 1px solid var(--iron-line);
 }
 
 body.hungryman-iron-journal .iron-nav .wp-block-navigation__container {
 	flex-wrap: wrap;
-	gap: 1rem;
+	gap: 0.45rem;
+}
+
+body.hungryman-iron-journal .iron-nav .wp-block-navigation-item__content {
+	padding: 0.28rem 0.55rem;
+	border: 1px solid var(--iron-line);
+	background: var(--iron-surface-soft);
+	box-shadow: var(--iron-bevel);
+	color: var(--iron-text);
+	text-decoration: none;
+}
+
+body.hungryman-iron-journal .iron-nav .wp-block-navigation-item__content:hover {
+	background: var(--iron-blue-soft);
+	color: var(--iron-accent-strong);
 }
 
 body.hungryman-iron-journal .iron-nav .wp-block-navigation-item__label {
 	font-family: var(--wp--preset--font-family--utility-sans);
-	font-size: 0.82rem;
+	font-size: 0.8rem;
 	font-weight: 700;
-	letter-spacing: 0.04em;
+	letter-spacing: 0;
 	text-transform: uppercase;
 }
 
@@ -98,72 +137,152 @@ body.hungryman-iron-journal .iron-main-shell {
 
 body.hungryman-iron-journal .iron-section-title {
 	margin-top: 0;
-	border-bottom: 2px solid var(--iron-line);
-	padding-bottom: 0.4rem;
+	border-bottom: 2px solid var(--iron-line-dark);
+	padding-bottom: 0.45rem;
+	color: var(--iron-text);
+}
+
+body.hungryman-iron-journal .iron-home-lede,
+body.hungryman-iron-journal .iron-article,
+body.hungryman-iron-journal .iron-featured-post,
+body.hungryman-iron-journal .iron-archive-shell {
+	background: var(--iron-paper);
+	border: 1px solid var(--iron-line-dark);
+	box-shadow: var(--iron-bevel);
+}
+
+body.hungryman-iron-journal .iron-home-lede,
+body.hungryman-iron-journal .iron-article {
+	padding: clamp(1.15rem, 3vw, 2.2rem);
+}
+
+body.hungryman-iron-journal .iron-home-lede {
+	margin-bottom: 1rem;
+}
+
+body.hungryman-iron-journal .iron-home-lede h1,
+body.hungryman-iron-journal .iron-home-lede p {
+	margin-top: 0;
+}
+
+body.hungryman-iron-journal .iron-home-lede p {
+	max-width: 60ch;
+	color: var(--iron-muted);
+}
+
+body.hungryman-iron-journal .iron-featured-post {
+	margin-bottom: 1.25rem;
+	padding: clamp(1rem, 2.6vw, 1.4rem);
+}
+
+body.hungryman-iron-journal .iron-featured-post .wp-block-post-featured-image {
+	margin: 0 0 1rem;
+	border: 1px solid var(--iron-line-dark);
+	background: var(--iron-surface);
+}
+
+body.hungryman-iron-journal .iron-featured-post .wp-block-post-featured-image img,
+body.hungryman-iron-journal .iron-article .wp-block-post-featured-image img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+}
+
+body.hungryman-iron-journal .iron-featured-post .wp-block-post-title {
+	margin-top: 0.25rem;
+	margin-bottom: 0.45rem;
+	font-size: clamp(1.75rem, 4vw, 2.65rem);
+}
+
+body.hungryman-iron-journal .iron-featured-post .wp-block-post-excerpt,
+body.hungryman-iron-journal .iron-post-card .wp-block-post-excerpt {
+	margin: 0;
+	color: var(--iron-muted);
+}
+
+body.hungryman-iron-journal .iron-archive-shell {
+	padding: clamp(1rem, 2.4vw, 1.35rem);
+}
+
+body.hungryman-iron-journal .iron-query-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0;
 }
 
 body.hungryman-iron-journal .iron-query-grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 1.2rem;
+	gap: 1rem;
 }
 
 body.hungryman-iron-journal .iron-post-card {
+	padding: 0.95rem 0;
+	background: transparent;
+	border-top: 1px solid var(--iron-line);
+}
+
+body.hungryman-iron-journal .iron-post-card:first-child {
+	border-top: 0;
+	padding-top: 0;
+}
+
+body.hungryman-iron-journal .iron-query-grid .iron-post-card {
 	padding: 1rem;
-	background: var(--iron-surface);
-	border: 1px solid var(--iron-line);
+	background: var(--iron-paper);
+	border: 1px solid var(--iron-line-dark);
+	box-shadow: var(--iron-bevel);
 }
 
 body.hungryman-iron-journal .iron-post-card .wp-block-post-title {
-	margin-top: 0.4rem;
-	margin-bottom: 0.5rem;
-	font-size: clamp(1.3rem, 4vw, 1.6rem);
+	margin-top: 0.25rem;
+	margin-bottom: 0.35rem;
+	font-size: clamp(1.25rem, 3vw, 1.55rem);
+}
+
+body.hungryman-iron-journal .wp-block-post-title a {
+	color: var(--iron-text);
+	text-decoration: none;
+}
+
+body.hungryman-iron-journal .wp-block-post-title a:hover {
+	color: var(--iron-accent-strong);
+	text-decoration: underline;
 }
 
 body.hungryman-iron-journal .iron-post-card .wp-block-post-terms,
-body.hungryman-iron-journal .iron-post-card .wp-block-post-date {
-	font-family: var(--wp--preset--font-family--utility-sans);
-	font-size: 0.72rem;
-	color: var(--iron-muted);
-	text-transform: uppercase;
-	letter-spacing: 0.06em;
-}
-
-body.hungryman-iron-journal .iron-post-card .wp-block-post-excerpt {
-	margin: 0;
-	color: var(--iron-text);
-}
-
-body.hungryman-iron-journal .iron-article {
-	background: var(--iron-surface);
-	border: 1px solid var(--iron-line);
-	padding: clamp(1.1rem, 3vw, 2rem);
-}
-
-body.hungryman-iron-journal .iron-article .wp-block-post-title {
-	margin-top: 0;
-	margin-bottom: 0.4rem;
-	border-bottom: 2px solid var(--iron-line);
-	padding-bottom: 0.45rem;
-}
-
+body.hungryman-iron-journal .iron-post-card .wp-block-post-date,
+body.hungryman-iron-journal .iron-featured-post .wp-block-post-terms,
+body.hungryman-iron-journal .iron-featured-post .wp-block-post-date,
 body.hungryman-iron-journal .iron-article .wp-block-post-terms,
 body.hungryman-iron-journal .iron-article .wp-block-post-date,
 body.hungryman-iron-journal .iron-article .wp-block-post-author-name {
 	font-family: var(--wp--preset--font-family--utility-sans);
-	font-size: 0.77rem;
+	font-size: 0.76rem;
 	color: var(--iron-muted);
 	text-transform: uppercase;
-	letter-spacing: 0.05em;
+	letter-spacing: 0;
+}
+
+body.hungryman-iron-journal .iron-article .wp-block-post-title {
+	margin-top: 0;
+	margin-bottom: 0.55rem;
+	border-bottom: 2px solid var(--iron-line-dark);
+	padding-bottom: 0.5rem;
 }
 
 body.hungryman-iron-journal .iron-article .wp-block-post-featured-image {
-	margin: 0.85rem 0 1rem;
-	border: 1px solid var(--iron-line);
+	margin: 1rem 0 1.25rem;
+	border: 1px solid var(--iron-line-dark);
+	background: var(--iron-surface);
+}
+
+body.hungryman-iron-journal .iron-article .wp-block-post-content {
+	font-size: 1.08rem;
 }
 
 body.hungryman-iron-journal .iron-article .wp-block-post-content > * + * {
-	margin-top: 1.05rem;
+	margin-top: 1.15rem;
 }
 
 body.hungryman-iron-journal .iron-article .wp-block-post-content p,
@@ -171,24 +290,44 @@ body.hungryman-iron-journal .iron-article .wp-block-post-content li {
 	color: var(--iron-text);
 }
 
+body.hungryman-iron-journal .iron-article .wp-block-post-content h2,
+body.hungryman-iron-journal .iron-article .wp-block-post-content h3 {
+	margin-top: 1.8rem;
+	margin-bottom: 0.55rem;
+}
+
 body.hungryman-iron-journal .iron-article .wp-block-post-content blockquote {
-	margin: 1.3rem 0;
-	padding: 0.75rem 1rem;
-	border-left: 3px solid var(--iron-accent);
-	background: var(--iron-surface-soft);
+	margin: 1.45rem 0;
+	padding: 0.9rem 1rem;
+	border: 1px solid var(--iron-line);
+	border-left: 5px solid var(--iron-accent);
+	background:
+		linear-gradient(180deg, transparent 27px, var(--iron-paper-line) 28px),
+		var(--iron-surface-soft);
+	background-size: 100% 28px;
 	color: var(--iron-muted);
 }
 
 body.hungryman-iron-journal .iron-article .wp-block-post-content code,
 body.hungryman-iron-journal .iron-article .wp-block-post-content pre {
-	background: #0c0c0b;
-	color: #f0e7d8;
+	background: #ecebe4;
+	color: var(--iron-text);
 	border: 1px solid var(--iron-line);
+}
+
+body.hungryman-iron-journal .iron-article .wp-block-post-content code {
+	padding: 0.08rem 0.25rem;
+}
+
+body.hungryman-iron-journal .iron-article .wp-block-post-content pre {
+	padding: 0.9rem;
+	overflow-x: auto;
 }
 
 body.hungryman-iron-journal .iron-article .wp-block-post-content table {
 	width: 100%;
 	border-collapse: collapse;
+	font-size: 0.96rem;
 }
 
 body.hungryman-iron-journal .iron-article .wp-block-post-content td,
@@ -197,18 +336,29 @@ body.hungryman-iron-journal .iron-article .wp-block-post-content th {
 	padding: 0.55rem;
 }
 
+body.hungryman-iron-journal .iron-article .wp-block-post-content th {
+	background: var(--iron-surface-soft);
+	font-family: var(--wp--preset--font-family--utility-sans);
+	text-align: left;
+}
+
 body.hungryman-iron-journal .weekly-log-shell {
 	padding: 1rem;
-	border: 1px solid var(--iron-line);
-	background: linear-gradient(180deg, rgba(35, 35, 32, 0.55), rgba(26, 26, 23, 0.55));
+	border: 1px solid var(--iron-line-dark);
+	background:
+		linear-gradient(180deg, transparent 27px, var(--iron-paper-line) 28px),
+		var(--iron-paper);
+	background-size: 100% 28px;
+	box-shadow: var(--iron-bevel);
 }
 
 body.hungryman-iron-journal .weekly-log-heading {
 	margin-top: 1rem;
 	margin-bottom: 0.5rem;
-	font-size: clamp(1.1rem, 4.1vw, 1.35rem);
+	font-size: clamp(1.08rem, 3vw, 1.3rem);
 	border-bottom: 1px solid var(--iron-line);
-	padding-bottom: 0.32rem;
+	padding-bottom: 0.25rem;
+	color: var(--iron-accent);
 }
 
 body.hungryman-iron-journal .weekly-log-heading:first-child {
@@ -229,10 +379,10 @@ body.hungryman-iron-journal .weekly-log-list li + li {
 body.hungryman-iron-journal .iron-vhs-embed,
 body.hungryman-iron-journal .wp-block-embed.is-style-iron-vhs {
 	position: relative;
-	margin-top: 0.7rem;
-	border: 1px solid #504948;
-	background: #090909;
-	box-shadow: var(--vhs-frame-shadow);
+	margin-top: 0.8rem;
+	border: 1px solid var(--iron-line-dark);
+	background: #1d1d1b;
+	box-shadow: inset 1px 1px 0 #4b4b46, inset -1px -1px 0 #080807;
 	overflow: hidden;
 }
 
@@ -240,6 +390,7 @@ body.hungryman-iron-journal .iron-vhs-embed .wp-block-embed__wrapper,
 body.hungryman-iron-journal .wp-block-embed.is-style-iron-vhs .wp-block-embed__wrapper {
 	position: relative;
 	z-index: 1;
+	color: #f6f0e5;
 }
 
 body.hungryman-iron-journal .iron-vhs-embed iframe,
@@ -247,7 +398,7 @@ body.hungryman-iron-journal .wp-block-embed.is-style-iron-vhs iframe {
 	display: block;
 	width: 100%;
 	aspect-ratio: 16 / 9;
-	filter: contrast(1.08) saturate(0.82) brightness(0.92);
+	filter: contrast(1.06) saturate(0.88);
 }
 
 body.hungryman-iron-journal .iron-vhs-embed::before,
@@ -257,56 +408,15 @@ body.hungryman-iron-journal .wp-block-embed.is-style-iron-vhs::before {
 	inset: 0;
 	z-index: 2;
 	pointer-events: none;
-	background:
-		repeating-linear-gradient(
-			180deg,
-			rgba(255, 255, 255, var(--vhs-line-opacity)) 0,
-			rgba(255, 255, 255, var(--vhs-line-opacity)) 1px,
-			transparent 2px,
-			transparent 4px
-		),
-		radial-gradient(rgba(255, 255, 255, var(--vhs-noise-opacity)) 0.6px, transparent 0.9px),
-		linear-gradient(90deg, rgba(143, 42, 42, 0.08), rgba(0, 0, 0, 0), rgba(90, 116, 136, 0.08));
-	background-size: 100% 100%, 3px 3px, 100% 100%;
+	background: repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0, rgba(255, 255, 255, 0.12) 1px, transparent 2px, transparent 5px);
 	mix-blend-mode: screen;
-}
-
-body.hungryman-iron-journal .iron-vhs-embed::after,
-body.hungryman-iron-journal .wp-block-embed.is-style-iron-vhs::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	height: 14%;
-	top: -20%;
-	z-index: 3;
-	pointer-events: none;
-	background: linear-gradient(180deg, rgba(255, 255, 255, var(--vhs-tracking-opacity)), rgba(255, 255, 255, 0));
-	animation: ironVhsTracking 8s linear infinite;
-}
-
-@keyframes ironVhsTracking {
-	0% {
-		transform: translateY(0);
-	}
-	100% {
-		transform: translateY(760%);
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	body.hungryman-iron-journal .iron-vhs-embed::after,
-	body.hungryman-iron-journal .wp-block-embed.is-style-iron-vhs::after {
-		animation: none;
-		top: 0;
-		opacity: 0.35;
-	}
 }
 
 body.hungryman-iron-journal .site-footer {
 	margin-top: 2rem;
-	border-top: 1px solid var(--iron-line);
+	border-top: 1px solid var(--iron-line-dark);
 	background: var(--iron-surface);
+	box-shadow: inset 0 1px 0 var(--iron-highlight);
 }
 
 body.hungryman-iron-journal .iron-footer-note {
@@ -314,8 +424,27 @@ body.hungryman-iron-journal .iron-footer-note {
 	font-family: var(--wp--preset--font-family--utility-sans);
 	font-size: 0.76rem;
 	text-transform: uppercase;
-	letter-spacing: 0.07em;
+	letter-spacing: 0;
 	color: var(--iron-muted);
+}
+
+body.hungryman-iron-journal .wp-block-button__link {
+	border: 1px solid var(--iron-line-dark);
+	box-shadow: var(--iron-bevel);
+}
+
+body.hungryman-iron-journal .wp-block-query-pagination {
+	margin-top: 1.5rem;
+	font-family: var(--wp--preset--font-family--utility-sans);
+}
+
+body.hungryman-iron-journal .wp-block-query-pagination a,
+body.hungryman-iron-journal .wp-block-query-pagination .page-numbers {
+	padding: 0.25rem 0.45rem;
+	border: 1px solid var(--iron-line);
+	background: var(--iron-paper);
+	box-shadow: var(--iron-bevel);
+	text-decoration: none;
 }
 
 @media (min-width: 782px) {
@@ -323,7 +452,14 @@ body.hungryman-iron-journal .iron-footer-note {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	body.hungryman-iron-journal .iron-post-card {
-		padding: 1.1rem;
+	body.hungryman-iron-journal .iron-featured-post {
+		display: grid;
+		grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+		gap: 1.35rem;
+		align-items: center;
+	}
+
+	body.hungryman-iron-journal .iron-featured-post .wp-block-post-featured-image {
+		margin: 0;
 	}
 }

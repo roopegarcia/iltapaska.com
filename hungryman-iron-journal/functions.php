@@ -66,8 +66,8 @@ function hungryman_iron_journal_register_patterns() {
 				'<!-- wp:heading {"level":2,"className":"weekly-log-heading"} --><h2 class="wp-block-heading weekly-log-heading">Work / Modern Life Notes</h2><!-- /wp:heading -->' .
 				'<!-- wp:paragraph {"className":"weekly-log-block"} --><p class="weekly-log-block">Work stress, family logistics, and how training fit real life this week.</p><!-- /wp:paragraph -->' .
 				'<!-- wp:heading {"level":2,"className":"weekly-log-heading"} --><h2 class="wp-block-heading weekly-log-heading">Iron Archive</h2><!-- /wp:heading -->' .
-				'<!-- wp:paragraph {"className":"weekly-log-block"} --><p class="weekly-log-block">Drop in an old-school clip and annotate what still holds up.</p><!-- /wp:paragraph -->' .
-				'<!-- wp:group {"className":"iron-vhs-embed","layout":{"type":"constrained"}} --><div class="wp-block-group iron-vhs-embed"><!-- wp:embed {"url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ","type":"video","providerNameSlug":"youtube","responsive":true,"className":"is-style-iron-vhs"} --><figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube is-style-iron-vhs"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=dQw4w9WgXcQ</div></figure><!-- /wp:embed --></div><!-- /wp:group -->' .
+				'<!-- wp:paragraph {"className":"weekly-log-block"} --><p class="weekly-log-block">An old clip, book note, training idea, or bit of gym archaeology worth keeping.</p><!-- /wp:paragraph -->' .
+				'<!-- wp:group {"className":"iron-vhs-embed","layout":{"type":"constrained"}} --><div class="wp-block-group iron-vhs-embed"><!-- wp:paragraph {"className":"weekly-log-block"} --><p class="weekly-log-block">Optional archive embed or note.</p><!-- /wp:paragraph --></div><!-- /wp:group -->' .
 				'</div><!-- /wp:group -->',
 		)
 	);
