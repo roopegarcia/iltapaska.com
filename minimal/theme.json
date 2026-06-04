@@ -1,0 +1,152 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.0/theme.json",
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"color": "#11100e",
+					"name": "Iron Black",
+					"slug": "iron-black"
+				},
+				{
+					"color": "#191715",
+					"name": "Plate Black",
+					"slug": "plate-black"
+				},
+				{
+					"color": "#e6dfd0",
+					"name": "Old Paper",
+					"slug": "old-paper"
+				},
+				{
+					"color": "#a79f91",
+					"name": "Chalk Grey",
+					"slug": "chalk-grey"
+				},
+				{
+					"color": "#8d3328",
+					"name": "Rust Red",
+					"slug": "rust-red"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "680px",
+			"wideSize": "1040px"
+		},
+		"spacing": {
+			"units": [ "%", "px", "em", "rem", "vh", "vw" ]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Georgia, 'Times New Roman', Times, serif",
+					"name": "Book Serif",
+					"slug": "book-serif"
+				},
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+					"name": "System Font",
+					"slug": "system-font"
+				},
+				{
+					"fontFamily": "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+					"name": "Notebook Mono",
+					"slug": "notebook-mono"
+				}
+			],
+			"fontSizes": [
+				{
+					"name": "Small",
+					"size": "0.875rem",
+					"slug": "small"
+				},
+				{
+					"name": "Medium",
+					"size": "1.125rem",
+					"slug": "medium"
+				},
+				{
+					"name": "Large",
+					"size": "1.75rem",
+					"slug": "large"
+				},
+				{
+					"name": "Extra Large",
+					"size": "2.75rem",
+					"slug": "x-large"
+				}
+			]
+		},
+		"useRootPaddingAwareAlignments": true
+	},
+	"styles": {
+		"color": {
+			"background": "#11100e",
+			"text": "#e6dfd0"
+		},
+		"elements": {
+			"button": {
+				"color": {
+					"background": "#8d3328",
+					"text": "#f3ead8"
+				}
+			},
+			"caption": {
+				"color": {
+					"text": "#a79f91"
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|system-font",
+					"fontSize": "var:preset|font-size|small"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|book-serif",
+					"fontWeight": "400",
+					"lineHeight": "1.05"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|book-serif",
+					"fontWeight": "400",
+					"lineHeight": "1.15"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|book-serif",
+					"fontWeight": "400",
+					"lineHeight": "1.2"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "#d47d66"
+				}
+			}
+		},
+		"spacing": {
+			"blockGap": "1.45rem"
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|book-serif",
+			"fontSize": "1.125rem",
+			"lineHeight": "1.72"
+		}
+	},
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header"
+		},
+		{
+			"area": "footer",
+			"name": "footer"
+		}
+	],
+	"version": 3
+}

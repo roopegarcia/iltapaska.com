@@ -1,0 +1,55 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"site-main journal-home","layout":{"type":"constrained"}} -->
+<main class="wp-block-group site-main journal-home">
+	<!-- wp:query {"queryId":1,"query":{"perPage":1,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false},"className":"latest-journal-query"} -->
+	<div class="wp-block-query latest-journal-query">
+		<!-- wp:post-template -->
+			<!-- wp:group {"tagName":"article","className":"latest-journal-entry","layout":{"type":"constrained"}} -->
+			<article class="wp-block-group latest-journal-entry">
+				<!-- wp:group {"className":"post-meta","layout":{"type":"flex","flexWrap":"wrap"}} -->
+				<div class="wp-block-group post-meta">
+					<!-- wp:post-date /-->
+					<!-- wp:post-terms {"term":"category","prefix":"Filed under "} /-->
+				</div>
+				<!-- /wp:group -->
+
+				<!-- wp:post-title {"isLink":true,"level":1,"className":"latest-journal-title"} /-->
+
+				<!-- wp:post-excerpt {"moreText":"Read the entry","showMoreOnNewLine":true,"excerptLength":52} /-->
+			</article>
+			<!-- /wp:group -->
+		<!-- /wp:post-template -->
+	</div>
+	<!-- /wp:query -->
+
+	<!-- wp:separator {"className":"archive-rule"} -->
+	<hr class="wp-block-separator has-alpha-channel-opacity archive-rule"/>
+	<!-- /wp:separator -->
+
+	<!-- wp:heading {"level":2,"className":"archive-heading"} -->
+	<h2 class="wp-block-heading archive-heading">Recent Notes</h2>
+	<!-- /wp:heading -->
+
+	<!-- wp:query {"queryId":2,"query":{"perPage":12,"pages":0,"offset":1,"postType":"post","order":"desc","orderBy":"date","inherit":false},"className":"journal-archive-query"} -->
+	<div class="wp-block-query journal-archive-query">
+		<!-- wp:post-template {"className":"journal-archive-list"} -->
+			<!-- wp:group {"tagName":"article","className":"archive-entry","layout":{"type":"constrained"}} -->
+			<article class="wp-block-group archive-entry">
+				<!-- wp:post-date {"className":"archive-entry-date"} /-->
+				<!-- wp:post-title {"isLink":true,"level":3,"className":"archive-entry-title"} /-->
+				<!-- wp:post-excerpt {"moreText":"","showMoreOnNewLine":false,"excerptLength":24,"className":"archive-entry-excerpt"} /-->
+			</article>
+			<!-- /wp:group -->
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"},"className":"journal-pagination"} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
