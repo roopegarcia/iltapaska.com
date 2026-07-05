@@ -427,6 +427,142 @@ a:focus {
 	max-width: 52ch;
 }
 
+.beard-poll {
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+		var(--wp--preset--color--plate-black);
+	border: 1px solid rgba(230, 223, 208, 0.16);
+	box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+	color: var(--wp--preset--color--old-paper);
+	max-width: 42rem;
+	padding: clamp(1.3rem, 3.6vw, 2rem);
+}
+
+.beard-poll__eyebrow {
+	color: var(--wp--preset--color--chalk-grey);
+	font-family: var(--wp--preset--font-family--notebook-mono);
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	line-height: 1.25;
+	margin: 0 0 0.6rem;
+	text-transform: uppercase;
+}
+
+.beard-poll__title {
+	font-size: clamp(1.6rem, 3.6vw, 2.45rem);
+	font-weight: 400;
+	line-height: 1.08;
+	margin: 0;
+	max-width: 14ch;
+}
+
+.beard-poll__note {
+	color: #d0c7b8;
+	font-size: 1rem;
+	line-height: 1.6;
+	margin: 0.8rem 0 0;
+	max-width: 46ch;
+}
+
+.beard-poll__form {
+	display: grid;
+	gap: 1rem;
+	margin-top: 1.4rem;
+}
+
+.beard-poll__fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.beard-poll__legend {
+	color: var(--wp--preset--color--old-paper);
+	font-family: var(--wp--preset--font-family--notebook-mono);
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	line-height: 1.35;
+	margin-bottom: 0.8rem;
+	text-transform: uppercase;
+}
+
+.beard-poll__options {
+	display: grid;
+	gap: 0.65rem;
+}
+
+.beard-poll__option {
+	align-items: flex-start;
+	background: rgba(17, 16, 14, 0.4);
+	border: 1px solid rgba(230, 223, 208, 0.14);
+	display: flex;
+	gap: 0.7rem;
+	padding: 0.85rem 0.9rem;
+	transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.beard-poll__option:hover {
+	background: rgba(25, 23, 21, 0.82);
+	border-color: rgba(230, 223, 208, 0.24);
+	transform: translateY(-1px);
+}
+
+.beard-poll__option input[type="radio"] {
+	accent-color: var(--wp--preset--color--rust-red);
+	flex: 0 0 auto;
+	margin-top: 0.2rem;
+}
+
+.beard-poll__option span {
+	color: var(--wp--preset--color--old-paper);
+	font-family: var(--wp--preset--font-family--book-serif);
+	font-size: 1.02rem;
+	line-height: 1.45;
+}
+
+.beard-poll__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8rem;
+	margin-top: 0.25rem;
+}
+
+.beard-poll__button {
+	-webkit-appearance: none;
+	appearance: none;
+	background: var(--wp--preset--color--rust-red);
+	border: 1px solid rgba(230, 223, 208, 0.26);
+	border-radius: 0;
+	box-shadow: none;
+	color: #f3ead8;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: var(--wp--preset--font-family--notebook-mono);
+	font-size: 0.78rem;
+	font-weight: 700;
+	justify-content: center;
+	letter-spacing: 0.08em;
+	line-height: 1;
+	padding: 0.78rem 0.95rem;
+	text-transform: uppercase;
+	transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.beard-poll__button:hover,
+.beard-poll__button:focus {
+	background: #a84234;
+	border-color: rgba(230, 223, 208, 0.48);
+	color: #fff7e8;
+	transform: translateY(-1px);
+}
+
+.beard-poll__button:focus-visible {
+	outline: 2px solid #d47d66;
+	outline-offset: 3px;
+}
+
 .single-entry-header {
 	border-bottom: 1px solid rgba(230, 223, 208, 0.16);
 	gap: 1.1rem;
