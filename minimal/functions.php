@@ -1,5 +1,6 @@
 <?php
 /**
+<<<<<<< HEAD
  * Theme bootstrap.
  *
  * @package minimal
@@ -195,3 +196,28 @@ function minimal_login_message( $message ) {
 	return $note . $message;
 }
 add_filter( 'login_message', 'minimal_login_message' );
+=======
+ * Theme setup and assets.
+ *
+ * @package Minimal
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Load the display typeface. The CSS font stack remains usable if Google Fonts
+ * is unavailable or blocked by the visitor.
+ */
+function minimal_enqueue_fonts() {
+	wp_enqueue_style(
+		'minimal-special-elite',
+		'https://fonts.googleapis.com/css2?family=Special+Elite&display=swap',
+		array(),
+		null
+	);
+}
+add_action( 'wp_enqueue_scripts', 'minimal_enqueue_fonts' );
+add_action( 'enqueue_block_editor_assets', 'minimal_enqueue_fonts' );
+>>>>>>> befbb2f (new theme)
