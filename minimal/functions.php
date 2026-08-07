@@ -25,6 +25,24 @@ add_action( 'wp_enqueue_scripts', 'minimal_enqueue_fonts' );
 add_action( 'enqueue_block_editor_assets', 'minimal_enqueue_fonts' );
 
 /**
+ * Load the theme stylesheet on the public site. Block themes do not guarantee
+ * that style.css is enqueued automatically, while add_editor_style() handles
+ * the editor separately.
+ */
+function minimal_enqueue_theme_styles() {
+	$stylesheet_path = get_stylesheet_directory() . '/style.css';
+	$version         = file_exists( $stylesheet_path ) ? (string) filemtime( $stylesheet_path ) : wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_style(
+		'minimal-theme',
+		get_stylesheet_uri(),
+		array( 'minimal-special-elite' ),
+		$version
+	);
+}
+add_action( 'wp_enqueue_scripts', 'minimal_enqueue_theme_styles' );
+
+/**
  * Register optional block styles used by the journal.
  */
 function minimal_register_block_styles() {
