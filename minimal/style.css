@@ -324,6 +324,62 @@ a:hover {
 	padding-left: 1.25rem;
 }
 
+/* Optional Quote block style: select "Margin note" in the block Styles panel. */
+.wp-block-quote.is-style-margin-note {
+	border: 0;
+	border-bottom: 1px solid rgba(37, 34, 29, 0.26);
+	border-top: 1px solid rgba(37, 34, 29, 0.26);
+	color: var(--wp--preset--color--typewriter-ink);
+	font-style: normal;
+	margin-left: 0;
+	padding: clamp(2.25rem, 6vw, 3.5rem) 0 clamp(2rem, 5vw, 3rem);
+	position: relative;
+	text-align: center;
+}
+
+.wp-block-quote.is-style-margin-note::before {
+	color: var(--wp--preset--color--editor-red);
+	content: "“";
+	display: block;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: clamp(4rem, 10vw, 6rem);
+	font-style: normal;
+	font-weight: 700;
+	height: 0.55em;
+	line-height: 0.9;
+	margin-bottom: 0.45em;
+}
+
+.wp-block-quote.is-style-margin-note p {
+	font-size: clamp(1.35rem, 3.4vw, 2rem);
+	line-height: 1.45;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 28ch;
+}
+
+.wp-block-quote.is-style-margin-note cite,
+.wp-block-quote.is-style-margin-note .wp-block-quote__citation {
+	color: var(--wp--preset--color--faded-ink);
+	display: block;
+	font-family: var(--wp--preset--font-family--typewriter);
+	font-size: 0.72rem;
+	font-style: normal;
+	letter-spacing: 0.08em;
+	line-height: 1.5;
+	margin-top: 1.75rem;
+	text-transform: uppercase;
+}
+
+.wp-block-quote.is-style-margin-note cite::before,
+.wp-block-quote.is-style-margin-note .wp-block-quote__citation::before {
+	border-top: 2px solid var(--wp--preset--color--editor-red);
+	content: "";
+	display: block;
+	margin: 0 auto 0.75rem;
+	width: 2.75rem;
+}
+
 .wp-block-pullquote {
 	border-bottom: 1px solid rgba(37, 34, 29, 0.26);
 	border-top: 1px solid rgba(37, 34, 29, 0.26);

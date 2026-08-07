@@ -25,6 +25,20 @@ add_action( 'wp_enqueue_scripts', 'minimal_enqueue_fonts' );
 add_action( 'enqueue_block_editor_assets', 'minimal_enqueue_fonts' );
 
 /**
+ * Register optional block styles used by the journal.
+ */
+function minimal_register_block_styles() {
+	register_block_style(
+		'core/quote',
+		array(
+			'name'  => 'margin-note',
+			'label' => __( 'Margin note', 'minimal' ),
+		)
+	);
+}
+add_action( 'init', 'minimal_register_block_styles' );
+
+/**
  * Keep the editor close to the front-end presentation and preserve the existing
  * registration setting used by the members-only Bench-220 series.
  */
