@@ -10,13 +10,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Load the display typeface. The CSS font stack remains usable if Google Fonts
- * is unavailable or blocked by the visitor.
+ * Load the display and handwritten typefaces. Their CSS font stacks remain
+ * usable if Google Fonts is unavailable or blocked by the visitor.
  */
 function minimal_enqueue_fonts() {
 	wp_enqueue_style(
-		'minimal-special-elite',
-		'https://fonts.googleapis.com/css2?family=Special+Elite&display=swap',
+		'minimal-google-fonts',
+		'https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Special+Elite&display=swap',
 		array(),
 		null
 	);
@@ -36,7 +36,7 @@ function minimal_enqueue_theme_styles() {
 	wp_enqueue_style(
 		'minimal-theme',
 		get_stylesheet_uri(),
-		array( 'minimal-special-elite' ),
+		array( 'minimal-google-fonts' ),
 		$version
 	);
 }
@@ -51,6 +51,14 @@ function minimal_register_block_styles() {
 		array(
 			'name'  => 'margin-note',
 			'label' => __( 'Margin note', 'minimal' ),
+		)
+	);
+
+	register_block_style(
+		'core/image',
+		array(
+			'name'  => 'polaroid',
+			'label' => __( 'Polaroid', 'minimal' ),
 		)
 	);
 }

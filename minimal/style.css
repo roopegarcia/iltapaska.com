@@ -13,6 +13,7 @@ Tags: blog, one-column, block-styles, full-site-editing
 */
 
 :root {
+	--minimal-ballpoint-blue: #24509a;
 	color-scheme: light;
 }
 
@@ -438,6 +439,38 @@ a:hover {
 	line-height: 1.5;
 	margin-top: 0.7rem;
 	text-align: left;
+}
+
+/* Optional Image block style: select "Polaroid" in the block Styles panel. */
+.wp-block-image.is-style-polaroid {
+	background: #faf7ed;
+	border: 1px solid rgba(37, 34, 29, 0.24);
+	box-shadow: 0.25rem 0.4rem 1rem rgba(37, 34, 29, 0.16);
+	max-width: 100%;
+	padding: clamp(0.45rem, 1.5vw, 0.7rem) clamp(0.45rem, 1.5vw, 0.7rem) clamp(1rem, 3vw, 1.35rem);
+	transform: rotate(-0.35deg);
+	transform-origin: center;
+	width: fit-content;
+}
+
+.wp-block-image.is-style-polaroid img {
+	border: 1px solid rgba(37, 34, 29, 0.28);
+	display: block;
+	height: auto;
+	margin: 0;
+	width: 100%;
+}
+
+.wp-block-image.is-style-polaroid figcaption {
+	color: var(--minimal-ballpoint-blue);
+	font-family: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+	font-size: clamp(1.15rem, 2.8vw, 1.45rem);
+	font-weight: 500;
+	letter-spacing: 0.01em;
+	line-height: 1.2;
+	margin: 0.85rem 0.4rem 0;
+	text-align: center;
+	transform: rotate(-0.6deg);
 }
 
 .single-entry-footer {
