@@ -55,6 +55,14 @@ function minimal_register_block_styles() {
 	);
 
 	register_block_style(
+		'core/quote',
+		array(
+			'name'  => 'song-lyrics',
+			'label' => __( 'Song lyrics', 'minimal' ),
+		)
+	);
+
+	register_block_style(
 		'core/image',
 		array(
 			'name'  => 'polaroid',
